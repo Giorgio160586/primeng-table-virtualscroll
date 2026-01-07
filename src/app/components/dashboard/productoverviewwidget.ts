@@ -63,7 +63,6 @@ interface Product {
         scrollHeight="320px"
         [loading]="loading()"
         [lazy]="true"
-        [virtualScrollDelay]="0"
         (onLazyLoad)="onLazyLoad($event)"
         styleClass="products-table"
         [ngClass]="{ 'p-dark': isDarkMode() }"
@@ -152,7 +151,7 @@ private allProducts: Product[] = this.buildMockData(50);
   filteredProducts: any = [];
 
 
-  protected pageSize: number = 6;
+  protected pageSize: number = 5;
  
   protected selectedProduct?: Product;
   public totalRecords = signal<number>(0);
